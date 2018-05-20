@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/OSSFileServer.iml" filepath="$PROJECT_DIR$/.idea/modules/OSSFileServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/OSSFileServer_main.iml" filepath="$PROJECT_DIR$/.idea/modules/OSSFileServer_main.iml" group="OSSFileServer" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/OSSFileServer_test.iml" filepath="$PROJECT_DIR$/.idea/modules/OSSFileServer_test.iml" group="OSSFileServer" />
+    </modules>
+  </component>
+</project>
