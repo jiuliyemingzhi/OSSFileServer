@@ -29,7 +29,7 @@ public class HttpFileServerHandler extends SimpleChannelInboundHandler<HttpObjec
 
     private HttpRequest request;
 
-    private static String KEY = "4b1c3b41-0f70-48ba-8347-efac7daeb8bf";
+    private static String KEY = "key";
 
     private static final HttpDataFactory factory =
             new DefaultHttpDataFactory(DefaultHttpDataFactory.MINSIZE);
@@ -65,7 +65,7 @@ public class HttpFileServerHandler extends SimpleChannelInboundHandler<HttpObjec
         if (httpObject instanceof HttpRequest) {
             request = (HttpRequest) httpObject;
         } else if (httpObject instanceof HttpContent) {
-            doHttpContent(ctx, ((HttpContent) httpObject));
+            doHttpContent(((HttpContent) httpObject));
             return;
         }
 
@@ -134,8 +134,7 @@ public class HttpFileServerHandler extends SimpleChannelInboundHandler<HttpObjec
         }
     }
 
-    private void doHttpContent(ChannelHandlerContext ctx,
-                               HttpContent httpContent) throws URISyntaxException {
+    private void doHttpContent(HttpContent httpContent) throws URISyntaxException {
         URI uri = new URI(request.uri());
         if (uri.getPath().startsWith("/upload")) {
             if (decoder != null) {
